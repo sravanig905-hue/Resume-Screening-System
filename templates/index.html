@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screening System</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f2f5f9;
+            padding:30px;
+        }
+
+        .box{
+            width:70%;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#007bff;
+            color:white;
+            border:none;
+        }
+
+        .section{
+            margin-top:15px;
+        }
+
+        .selected{color:green;font-weight:bold;}
+        .rejected{color:red;font-weight:bold;}
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Resume Screening System</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+<select name="job_role" required>
+    <option value="">Select Job Role</option>
+    <option>Python Developer</option>
+    <option>Java Developer</option>
+    <option>Data Scientist</option>
+    <option>Full Stack Developer</option>
+</select>
+
+<input type="file" name="resume" required>
+
+<button type="submit">Analyze</button>
+
+</form>
+
+{% if result %}
+
+<hr>
+
+<div class="section">
+<h3>Candidate Name</h3>
+<p>{{ result["Candidate Name"] }}</p>
+</div>
+
+<div class="section">
+<h3>Email</h3>
+<p>{{ result["Email"] }}</p>
+</div>
+
+<div class="section">
+<h3>Job Role</h3>
+<p>{{ result["Job Role"] }}</p>
+</div>
+
+<div class="section">
+<h3>Score</h3>
+<p>{{ result["Score"] }}%</p>
+</div>
+
+<div class="section">
+<h3>Status</h3>
+<p class="{% if result['Status']=='Selected' %}selected{% else %}rejected{% endif %}">
+{{ result["Status"] }}
+</p>
+</div>
+
+<div class="section">
+<h3>Matched Skills</h3>
+<ul>
+{% for s in result["Matched Skills"] %}
+<li>{{ s }}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="section">
+<h3>Missing Skills</h3>
+<ul>
+{% for s in result["Missing Skills"] %}
+<li>{{ s }}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="section">
+<h3>Certificates</h3>
+<ul>
+{% for c in result["Certificates"] %}
+<li>{{ c }}</li>
+{% endfor %}
+</ul>
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

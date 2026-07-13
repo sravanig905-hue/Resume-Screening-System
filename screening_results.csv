@@ -1,0 +1,13 @@
+timestamp,role,filename,score,decision,matched,required
+2025-12-03T16:09:25.434044,software engineer,resume 21.pdf,12.5,REJECTED,4,32
+2025-12-03T16:12:59.300973,software engineer,selected resume3.pdf,18.75,REJECTED,6,32
+2025-12-03T16:17:19.931563,software engineer,resume 2.pdf,15.62,REJECTED,5,32
+2025-12-03T16:24:28.099437,software engineer,resume14.pdf,12.5,REJECTED,4,32
+2025-12-04T15:31:52.937311,software engineer,resume 20.pdf,25.0,REJECTED,8,32
+2025-12-04T16:33:34.508036,software engineer,resume_s.pdf,28.12,REJECTED,9,32
+2025-12-04T16:38:56.850099,software engineer,Software_Engineer_Resume.pdf,34.38,REJECTED,11,32
+2025-12-04T16:42:08.470555,software engineer,Software_Engineer_Resume_Updated.pdf,65.62,SELECTED,21,32
+2025-12-05T12:58:36.164717,software engineer,Software_Engineer_Resume_Updated.pdf,65.62,SELECTED,21,32
+2025-12-06T07:24:37.681554,software engineer,Software_Engineer_Resume_Updated.pdf,65.62,SELECTED,21,32
+2025-12-06T07:32:27.445356,software engineer,resume 1.pdf,15.62,REJECTED,5,32
+2025-12-17T15:01:50.906829,software engineer,Software_Engineer_Resume_Updated.pdf,65.62,SELECTED,21,32
